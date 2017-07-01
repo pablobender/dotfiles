@@ -79,7 +79,7 @@
 
   # status
   s = status                        # status
-  st = status                       # status
+  st = status -s
   stat = status                     # status
 
   # tag
@@ -89,6 +89,8 @@
   svnr = svn rebase
   svnd = svn dcommit
   svnl = svn log --oneline --show-commit
+	tree = log --oneline --graph --decorate --all
+	ll = log --graph --date=short --all
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [mergetool]
