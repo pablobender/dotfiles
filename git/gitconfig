@@ -46,7 +46,7 @@
   last = diff HEAD^                 # diff last committed change
 
   # log
-  l = log --graph --date=short
+  l = log --graph --date=local
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
   short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
   simple = log --pretty=format:\" * %s\"
@@ -89,8 +89,10 @@
   svnr = svn rebase
   svnd = svn dcommit
   svnl = svn log --oneline --show-commit
-	tree = log --oneline --graph --decorate --all
-	ll = log --graph --date=short --all
+	tree = log --graph --all --decorate --oneline
+	ll = log --all --graph --date=local
+	fp = fetch --prune
+	plr = pull --rebase
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [mergetool]
@@ -101,7 +103,7 @@
 [merge]
   summary = true
   verbosity = 1
-  tool = mvimdiff
+	tool = vimdiff
 [apply]
   whitespace = nowarn
 [branch]
@@ -113,7 +115,6 @@
 [core]
   autocrlf = false
   editor = vim
-  excludesfile = ~/.yadr/git/gitignore
 [advice]
   statusHints = false
 [diff]
@@ -121,6 +122,7 @@
   # instead of a/b/c/d as prefixes for patches
   mnemonicprefix = true
 	algorithm = patience
+	tool = vimdiff
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
