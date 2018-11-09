@@ -29,3 +29,6 @@ endif
 
 colorscheme solarized
 set background=dark
+
+set cursorline
+hi CursorLine ctermbg=NONE guibg=NONE
