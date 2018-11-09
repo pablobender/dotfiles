@@ -5,6 +5,7 @@ if !has("nvim")
   Bundle "roxma/vim-hug-neovim-rpc"
 endif
 Bundle "Shougo/deoplete.nvim"
+Bundle "zchee/deoplete-go", { 'build': 'make' }
 Bundle "briandoll/change-inside-surroundings.vim.git"
 Bundle "godlygeek/tabular"
 Bundle "tomtom/tcomment_vim.git"
