@@ -187,7 +187,7 @@ of plugins above to learn more.
 
  * `,f` - instantly Find definition of class (must have exuberant ctags installed)
  * `,F` - same as `,f` but in a vertical split
- * `,gf` or `Ctrl-f` - same as vim normal gf (go to file), but in a vertical split (works with file.rb:123 line numbers also)
+ * `,gf` - same as vim normal gf (go to file), but reuse existing window for file buffer, if not on a new split
  * `gF` - standard vim mapping, here for completeness (go to file at line number)
  * `,k` - Search the current word under the cursor and show results in quickfix window
  * `,K` - Grep the current word up to next exclamation point (useful for ruby foo! methods)
