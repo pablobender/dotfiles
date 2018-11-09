@@ -174,8 +174,8 @@ def install_homebrew
   puts "======================================================"
   run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher ghi}
   # macvim option
-  # run %{brew install macvim --with-override-system-vim --with-lua --with-luajit}
-  run %{brew install vim --with-lua --with-luajit}
+  run %{brew install macvim --with-override-system-vim --with-lua --with-luajit}
+  # run %{brew install vim --with-lua}
   puts
   puts
 end
