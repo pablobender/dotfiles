@@ -170,3 +170,23 @@ map <silent> ,hp :!open -a Safari %<CR><CR>
 " :cp)
 nnoremap <silent> <C-x> :cn<CR>
 nnoremap <silent> <C-z> :cp<CR>
+
+" window(s) keymaps
+if has('terminal')
+  " enter on normal mode
+  tnoremap <C-N> <C-W>N
+  " navigate to neighbors windows from terminal mode
+  tnoremap <C-K> <C-W>k
+  tnoremap <C-J> <C-W>j
+  tnoremap <C-H> <C-W>h
+  tnoremap <C-L> <C-W>l
+endif
+
+" navigate to neighbors windows from visual mode
+vnoremap <C-K> <C-W>k
+vnoremap <C-J> <C-W>j
+vnoremap <C-H> <C-W>h
+vnoremap <C-L> <C-W>l
+
+" zoom in current window
+nnoremap <C-W>z <C-W>_<C-W>\|
