@@ -32,3 +32,5 @@ set background=dark
 
 set cursorline
 hi CursorLine ctermbg=NONE guibg=NONE
+hi VISUAL cterm=inverse term=inverse
+

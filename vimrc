@@ -113,5 +113,16 @@ set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
+
+" ================ enable mouse  ========================
+set mouse=a
+
+" ================ stty  ========================
+silent !stty -ixon
+autocmd VimLeave * silent !stty ixon
+
+" ================ lightweight shell ========================
+set shell=/bin/sh
+
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
