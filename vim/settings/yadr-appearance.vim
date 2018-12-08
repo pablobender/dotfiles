@@ -27,10 +27,25 @@ else
   end
 endif
 
-colorscheme solarized
 set background=dark
-
 set cursorline
-hi CursorLine ctermbg=NONE guibg=NONE
-hi VISUAL cterm=inverse term=inverse
 
+" colorschemes
+
+" solarized setup
+" colorscheme solarized
+
+" palenight setup
+" colorscheme palenight
+" let g:palenight_terminal_italics=0
+
+" landscape setup
+" colorscheme landscape
+
+" dracula setup
+" colorscheme dracula
+
+" gruvbox setup
+let g:gruvbox_italic=0
+colorscheme gruvbox
+hi CursorLine ctermbg=NONE
