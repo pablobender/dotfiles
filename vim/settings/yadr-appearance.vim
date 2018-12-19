@@ -13,9 +13,9 @@ if has("gui_running")
   set columns=190
 
   if has("gui_gtk2")
-    set guifont=Inconsolata\ XL\ 12,Inconsolata\ 15,Monaco\ 12
+    set guifont=Monaco\ 13,Inconsolata\ XL\ 13,Inconsolata\ 13
   else
-    set guifont=Inconsolata\ XL:h17,Inconsolata:h20,Monaco:h17
+    set guifont=Monaco:h13,Menlo:h13,Inconsolata\ XL:h12,Inconsolata:h13
   end
 else
   let g:CSApprox_loaded = 1
@@ -48,4 +48,4 @@ set cursorline
 " gruvbox setup
 let g:gruvbox_italic=0
 colorscheme gruvbox
-hi CursorLine ctermbg=NONE
+hi CursorLine ctermbg=NONE guibg=NONE
