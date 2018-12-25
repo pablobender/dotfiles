@@ -45,3 +45,8 @@ Session.vim
 # SASS
 # ----------------------------------------------------------------------------------------------
 .sass-cache
+.projections.json
+
+# todo.cli files
+/todo.txt
+/done.txt
