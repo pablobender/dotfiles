@@ -47,6 +47,8 @@
 
   # log
   l = log --graph --date=local
+	ll = log --all --graph --date=local
+	tree = log --graph --all --decorate --oneline
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
   short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
   simple = log --pretty=format:\" * %s\"
@@ -54,9 +56,13 @@
 
   # pull
   pl = pull                         # pull
+	plr = pull --rebase
 
   # push
   ps = push                         # push
+
+  # fetch
+	fp = fetch --prune
 
   # rebase
   rc = rebase --continue            # continue rebase
@@ -89,10 +95,6 @@
   svnr = svn rebase
   svnd = svn dcommit
   svnl = svn log --oneline --show-commit
-	tree = log --graph --all --decorate --oneline
-	ll = log --all --graph --date=local
-	fp = fetch --prune
-	plr = pull --rebase
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [mergetool]

@@ -1,6 +1,6 @@
-# Yadr
+# Yadr (Yet Another Dotfile Repo)
 
-## Tmux configuration
+## Tmux Customizations
 
 `tmux.conf` provides some sane defaults for tmux on Mac OS like a powerful status bar and vim keybindings.
 You can customize the configuration in `~/.tmux.conf.user`.
@@ -17,39 +17,39 @@ Key binding prefix like screen `C-a` (more confortable than default `C-b`).
 
 #### Create
 
-* `prefix s`, `prefix C-s`: horizontal split
-* `prefix v`, `prefix C-v`: vertical split
+* `prefix s`, `prefix C-s` - horizontal split
+* `prefix v`, `prefix C-v` - vertical split
 
 #### Navigation
 
-* `C-k`: select pane up
-* `C-l`: select pane right
-* `C-j`: select pane down
-* `C-h`: select pane left
+* `C-k` - select pane up
+* `C-l` - select pane right
+* `C-j` - select pane down
+* `C-h` - select pane left
 
 #### Resize
 
-* `prefix K`: resize pane 5 lines up
-* `prefix L`: resize pane 5 columns right
-* `prefix J`: resize pane 5 lines down
-* `prefix H`: resize pane 5 columns left
+* `prefix K` - resize pane 5 lines up
+* `prefix L` - resize pane 5 columns right
+* `prefix J` - resize pane 5 lines down
+* `prefix H` - resize pane 5 columns left
 
 ### Windows
 
 #### Create
 
-* `previx c`: new window
+* `previx c` - new window
 
 #### Navigation
 
-* `prefix n`: select next window
-* `prefix p`: select previous window
-* `prefix a`: select last window
+* `prefix n` - select next window
+* `prefix p` - select previous window
+* `prefix a` - select last window
 
 ### Pane input sync
 
-* `prefix e`: enable duplication input to any pane to all other panes (synchronize-panes)
-* `prefix E`: disable duplication input to any pane to all other panes (synchronize-panes)
+* `prefix e` - enable duplication input to any pane to all other panes (synchronize-panes)
+* `prefix E` - disable duplication input to any pane to all other panes (synchronize-panes)
 
 ### Reload configuration
 
@@ -61,5 +61,5 @@ Key binding prefix like screen `C-a` (more confortable than default `C-b`).
 
 ### Mouse
 
-* `prefix m`: enable mouse
-* `prefix M`: disable mouse
+* `prefix m` - enable mouse
+* `prefix M` - disable mouse
