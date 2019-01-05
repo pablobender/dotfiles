@@ -24,10 +24,15 @@ endfunction
 " you want the traditional beginning of line, use ^
 nnoremap 0 ^
 nnoremap ^ 0
+nnoremap 00 0
 
 " ,# Surround a word with #{ruby interpolation}
 map ,# ysiw#
 vmap ,# c#{<C-R>"}<ESC>
+
+" ,$ Surround a word with ${node/shell interpolation}
+map ,$ ysiw}i$<ESC>
+vmap ,$ c${<C-R>"}<ESC>
 
 " ," Surround a word with "quotes"
 map ," ysiw"
@@ -37,6 +42,10 @@ vmap ," c"<C-R>""<ESC>
 map ,' ysiw'
 vmap ,' c'<C-R>"'<ESC>
 
+" ,` Surrount a word with `back tic`
+map ,` ysiw`
+vmap ,` c`<C-R>"`<ESC>
+
 " ,) or ,( Surround a word with (parens)
 " The difference is in whether a space is put in
 map ,( ysiw(
@@ -45,18 +54,16 @@ vmap ,( c( <C-R>" )<ESC>
 vmap ,) c(<C-R>")<ESC>
 
 " ,[ Surround a word with [brackets]
-map ,] ysiw]
 map ,[ ysiw[
+map ,] ysiw]
 vmap ,[ c[ <C-R>" ]<ESC>
 vmap ,] c[<C-R>"]<ESC>
 
 " ,{ Surround a word with {braces}
-map ,} ysiw}
 map ,{ ysiw{
-vmap ,} c{ <C-R>" }<ESC>
-vmap ,{ c{<C-R>"}<ESC>
-
-map ,` ysiw`
+map ,} ysiw}
+vmap ,{ c{ <C-R>" }<ESC>
+vmap ,} c{<C-R>"}<ESC>
 
 " gary bernhardt's hashrocket
 imap <c-l> <space>=><space>
