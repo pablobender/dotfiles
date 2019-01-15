@@ -24,7 +24,6 @@ endfunction
 " you want the traditional beginning of line, use ^
 nnoremap 0 ^
 nnoremap ^ 0
-nnoremap 00 0
 
 " ,# Surround a word with #{ruby interpolation}
 map ,# ysiw#
