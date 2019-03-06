@@ -111,6 +111,31 @@ nnoremap <silent> ,x :bn<CR>
 " nnoremap <silent> <C-k> <C-w>k
 " nnoremap <silent> <C-j> <C-w>j
 
+" window(s) keymaps
+if has('nvim')
+  " enter on normal mode
+  tnoremap <C-N> <C-\><C-n>
+  " navigate to neighbors windows from terminal mode
+  tnoremap <C-h> <C-\><C-N><C-w>h
+  tnoremap <C-j> <C-\><C-N><C-w>j
+  tnoremap <C-k> <C-\><C-N><C-w>k
+  tnoremap <C-l> <C-\><C-N><C-w>l
+elseif has('terminal')
+  " enter on normal mode
+  tnoremap <C-N> <C-W>N
+  " navigate to neighbors windows from terminal mode
+  tnoremap <C-K> <C-W>k
+  tnoremap <C-J> <C-W>j
+  tnoremap <C-H> <C-W>h
+  tnoremap <C-L> <C-W>l
+endif
+
+" navigate to neighbors windows from visual mode
+vnoremap <C-K> <C-W>k
+vnoremap <C-J> <C-W>j
+vnoremap <C-H> <C-W>h
+vnoremap <C-L> <C-W>l
+
 " Make gf (go to file) create the file, if not existent
 nnoremap <C-w>f :sp +e<cfile><CR>
 nnoremap <C-w>gf :tabe<cfile><CR>
@@ -176,23 +201,3 @@ map <silent> ,hp :!open -a Safari %<CR><CR>
 " :cp)
 nnoremap <silent> <C-x> :cn<CR>
 nnoremap <silent> <C-z> :cp<CR>
-
-" window(s) keymaps
-if has('terminal')
-  " enter on normal mode
-  tnoremap <C-N> <C-W>N
-  " navigate to neighbors windows from terminal mode
-  tnoremap <C-K> <C-W>k
-  tnoremap <C-J> <C-W>j
-  tnoremap <C-H> <C-W>h
-  tnoremap <C-L> <C-W>l
-endif
-
-" navigate to neighbors windows from visual mode
-vnoremap <C-K> <C-W>k
-vnoremap <C-J> <C-W>j
-vnoremap <C-H> <C-W>h
-vnoremap <C-L> <C-W>l
-
-" zoom in current window
-nnoremap <C-W>z <C-W>_<C-W>\|

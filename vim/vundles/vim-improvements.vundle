@@ -1,10 +1,12 @@
 Bundle "AndrewRadev/splitjoin.vim"
 Bundle "Raimondi/delimitMate"
-if !has("nvim")
+if has("nvim")
+  Bundle "Shougo/deoplete.nvim", { 'do': ':UpdateRemotePlugins' }
+else
+  Bundle "Shougo/deoplete.nvim"
   Bundle "roxma/nvim-yarp"
   Bundle "roxma/vim-hug-neovim-rpc"
 endif
-Bundle "Shougo/deoplete.nvim"
 Bundle "zchee/deoplete-go", { 'build': 'make' }
 Bundle "briandoll/change-inside-surroundings.vim.git"
 Bundle "godlygeek/tabular"

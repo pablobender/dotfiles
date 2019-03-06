@@ -1,4 +1,6 @@
-if has('terminal')
+if has('nvim')
+  command! Sh exec 'botright split term://' . $SHELL
+elseif has('terminal')
   command! Sh exec 'botright terminal ' . $SHELL
 endif
 
