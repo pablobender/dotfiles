@@ -25,6 +25,10 @@ endfunction
 nnoremap 0 ^
 nnoremap ^ 0
 
+" map ; to :
+nmap ; :
+vmap ; :
+
 " ,# Surround a word with #{ruby interpolation}
 map ,# ysiw#
 vmap ,# c#{<C-R>"}<ESC>
@@ -141,7 +145,7 @@ nnoremap <C-w>f :sp +e<cfile><CR>
 nnoremap <C-w>gf :tabe<cfile><CR>
 
 " Zoom in
-map <silent> ,gz <C-w>o
+nnoremap <C-W>z <C-W>_<C-W>\|
 
 " Create window splits easier. The default
 " way is Ctrl-w,v and Ctrl-w,s. I remap
@@ -165,8 +169,9 @@ nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
 nnoremap <silent> ,cr :let @* = expand("%")<CR>
 nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
 
-"Clear current search highlight by double tapping //
-nmap <silent> // :nohlsearch<CR>
+"Clear current search highlight by tapping ,/
+nmap <silent> ,/ :nohlsearch<CR>
+vmap <silent> ,/ :nohlsearch<CR>
 
 "(v)im (c)ommand - execute current line as a vim command
 nmap <silent> ,vc yy:<C-f>p<C-c><CR>
