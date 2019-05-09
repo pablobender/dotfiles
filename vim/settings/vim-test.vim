@@ -9,3 +9,8 @@ if has('nvim') || has('terminal')
   let g:test#custom_strategies = { 'VimTerminal': function('VimTerminalTestStrategy') }
   let g:test#strategy = 'VimTerminal'
 endif
+
+nmap ts :TestSuite<CR>
+nmap tl :TestLast<CR>
+nmap tf :TestFile<CR>
+nmap tn :TestNearest<CR>
