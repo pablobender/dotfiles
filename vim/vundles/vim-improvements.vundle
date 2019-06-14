@@ -34,3 +34,7 @@ Bundle "vim-scripts/lastpos.vim"
 Bundle "vim-scripts/sudo.vim"
 Bundle "goldfeld/ctrlr.vim"
 Bundle "editorconfig/editorconfig-vim"
+"diminactive only in vim
+if !has("nvim")
+  Bundle "blueyed/vim-diminactive.git"
+endif
