@@ -3,12 +3,7 @@ Bundle "pablobender/lightline-gruvbox.vim"
 Bundle "itchyny/lightline.vim"
 Bundle "jby/tmux.vim.git"
 Bundle "xsunsmile/showmarks.git"
-" themes
-Bundle "skwp/vim-colors-solarized"
-Bundle "dracula/vim"
+" theme
 Bundle "morhetz/gruvbox"
-Bundle "drewtempelmeyer/palenight.vim"
-Bundle "itchyny/landscape.vim"
-
 " Required for Gblame in terminal vim
 Bundle "godlygeek/csapprox.git"

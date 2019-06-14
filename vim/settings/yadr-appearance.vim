@@ -19,31 +19,10 @@ if has("gui_running")
   end
 else
   let g:CSApprox_loaded = 1
-
-  " For people using a terminal that is not Solarized
-  if exists("g:yadr_using_unsolarized_terminal")
-    let g:solarized_termcolors=256
-    let g:solarized_termtrans=1
-  end
 endif
 
 set background=dark
 set cursorline
-
-" colorschemes
-
-" solarized setup
-" colorscheme solarized
-
-" palenight setup
-" colorscheme palenight
-" let g:palenight_terminal_italics=0
-
-" landscape setup
-" colorscheme landscape
-
-" dracula setup
-" colorscheme dracula
 
 " gruvbox setup
 let g:gruvbox_italic=0
