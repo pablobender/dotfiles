@@ -6,13 +6,19 @@ if has("nvim")
   " Call method on window enter
   augroup WindowManagement
     autocmd!
-    autocmd WinLeave * call Handle_Win_Enter()
+    autocmd FocusLost * call s:DimAll()
+    autocmd WinLeave * call s:DimInactives()
+    autocmd FocusGained * call s:DimInactives()
   augroup END
 
+  function! s:DimAll()
+    setlocal winhighlight=Normal:InactiveWindow,NormalNC:InactiveWindow
+  endfunction
+
   " Change highlight group of active/inactive windows
-  function! Handle_Win_Enter()
+  function! s:DimInactives()
     setlocal winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
   endfunction
 else
-  highlight ColorColumn ctermbg=236 guibg=#303030
+  " highlight ColorColumn ctermbg=236 guibg=#303030
 end
