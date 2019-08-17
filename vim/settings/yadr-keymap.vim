@@ -26,8 +26,8 @@ endfunction
 " nnoremap ^ 0
 
 " map ; to :
-nmap ; :
-vmap ; :
+" nmap ; :
+" vmap ; :
 
 " ,# Surround a word with #{ruby interpolation}
 map ,# ysiw#
