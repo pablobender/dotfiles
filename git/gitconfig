@@ -134,3 +134,9 @@
   path = .gitconfig.user
 [difftool]
 	trustExitCode = true
+[mergetool "nvim"]
+	cmd = nvim -f -d -c \"4wincmd w|wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" \"$MERGED\"
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+[difftool "nvim"]
+	cmd = nvim -f -d \"$LOCAL\" \"$REMOTE\"
