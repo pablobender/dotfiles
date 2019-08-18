@@ -1,7 +1,6 @@
 Bundle "chrisbra/color_highlight.git"
 Bundle "pablobender/lightline-gruvbox.vim"
 Bundle "itchyny/lightline.vim"
-Bundle "jby/tmux.vim.git"
 Bundle "xsunsmile/showmarks.git"
 " theme
 Bundle "morhetz/gruvbox"
