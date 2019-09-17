@@ -9,8 +9,8 @@ let g:lightline = {
       \   'readonly': 'MyReadonly',
       \   'filename': 'MyFilename'
       \ },
-      \ 'separator': { 'left': ' ', 'right': ' ' },
-			\ 'subseparator': { 'left': '', 'right': '' }
+      \ 'separator': { 'left': '', 'right': '' },
+			\ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
 " \ 'subseparator': { 'left': ' ', 'right': ' ' }
@@ -44,7 +44,7 @@ function! MyFugitive()
 endfunction
 
 function! MyFilename()
-  return ('' != expand('%') ? expand('%') : '[NoName]')
+  return ('' == expand('%') ? '[NoName]' : expand('%'))
 endfunction
 
 " Use status bar even with single buffer
