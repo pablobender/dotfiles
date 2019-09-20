@@ -67,9 +67,11 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-" Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
+" " Auto indent pasted text
+" !!! auto indent on past may be not desired (eg: yml files)
+" Problems with this map (neovim 0.4.2)
+" nnoremap p p=`]<C-o>
+" nnoremap P P=`]<C-o>
 
 filetype plugin on
 filetype indent on
