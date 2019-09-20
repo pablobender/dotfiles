@@ -10,7 +10,8 @@ endif
 Bundle "zchee/deoplete-go", { 'build': 'make' }
 Bundle "briandoll/change-inside-surroundings.vim.git"
 Bundle "godlygeek/tabular"
-Bundle "tomtom/tcomment_vim.git"
+Bundle "tpope/vim-commentary"
+Bundle "Lokaltog/vim-easymotion"
 Bundle "vim-scripts/camelcasemotion.git"
 Bundle "andymass/vim-matchup"
 Bundle "kristijanhusak/vim-multiple-cursors"
@@ -20,11 +21,9 @@ Bundle "christoomey/vim-tmux-navigator"
 Bundle "MarcWeber/vim-addon-mw-utils.git"
 Bundle "bogado/file-line.git"
 Bundle "mattn/webapi-vim.git"
-Bundle "sjl/gundo.vim"
 Bundle "tomtom/tlib_vim.git"
-Bundle "tpope/vim-abolish"
+Bundle "jiangmiao/auto-pairs"
 Bundle "tpope/vim-endwise.git"
-Bundle "tpope/vim-ragtag"
 Bundle "tpope/vim-repeat.git"
 Bundle "tpope/vim-surround.git"
 Bundle "tpope/vim-unimpaired"
@@ -34,7 +33,18 @@ Bundle "vim-scripts/lastpos.vim"
 Bundle "vim-scripts/sudo.vim"
 Bundle "goldfeld/ctrlr.vim"
 Bundle "editorconfig/editorconfig-vim"
-"diminactive only in vim
+Bundle "nathanaelkane/vim-indent-guides"
 if !has("nvim")
+  "diminactive only in vim
   Bundle "blueyed/vim-diminactive.git"
 endif
+" required by vim-radical
+Bundle "glts/vim-magnum"
+"convert numbers from/to decimal/hex/octal/binary
+Bundle "glts/vim-radical"
+" increment/decrement  dates with <C-A> and <C-X>
+Bundle "tpope/vim-speeddating"
+" paste over text objects
+Bundle "vim-scripts/ReplaceWithRegister"
+" sort txt objects/motions
+Bundle "christoomey/vim-sort-motion"
