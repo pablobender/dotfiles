@@ -1,4 +1,3 @@
-Bundle "rking/ag.vim"
 Bundle "henrik/vim-indexed-search"
 Bundle "nelstrom/vim-visual-star-search"
 Bundle "skwp/greplace.vim"

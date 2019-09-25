@@ -1,0 +1,5 @@
+--theme=1337
+--color=always
+--style=numbers,snip
+--italic-text=always
+--pager="less -FR"

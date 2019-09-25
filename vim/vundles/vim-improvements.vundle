@@ -48,3 +48,4 @@ Bundle "tpope/vim-speeddating"
 Bundle "vim-scripts/ReplaceWithRegister"
 " sort txt objects/motions
 Bundle "christoomey/vim-sort-motion"
+Bundle 'junegunn/fzf.vim'
