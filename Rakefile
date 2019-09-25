@@ -1,6 +1,5 @@
 require 'rake'
 require 'fileutils'
-require File.join(File.dirname(__FILE__), 'bin', 'yadr', 'vundle')
 
 desc "Hook our dotfiles into system-standard positions."
 task :install => [:submodule_init, :submodules] do
@@ -24,7 +23,7 @@ task :install => [:submodule_init, :submodules] do
 
   if want_to_install?('vim configuration (highly recommended)')
     install_files(Dir.glob('{vim,vimrc}'))
-    Rake::Task["install_vundle"].execute
+    Rake::Task["install_vim_plug"].execute
   end
 
   Rake::Task["install_prezto"].execute
@@ -44,7 +43,7 @@ end
 
 desc 'Updates the installation'
 task :update do
-  Rake::Task["vundle_migration"].execute if needs_migration_to_vundle?
+  Rake::Task["vim_plug_migration"].execute if needs_migration_to_vim_plug?
   Rake::Task["install"].execute
   #TODO: for now, we do the same as install. But it would be nice
   #not to clobber zsh files
@@ -72,15 +71,15 @@ task :submodules do
   end
 end
 
-desc "Performs migration from pathogen to vundle"
-task :vundle_migration do
+desc "Performs migration from pathogen to vim-plug"
+task :vim_plug_migration do
   puts "======================================================"
-  puts "Migrating from pathogen to vundle vim plugin manager. "
+  puts "Migrating from pathogen to vim-plug vim plugin manager. "
   puts "This will move the old .vim/bundle directory to"
   puts ".vim/bundle.old and replacing all your vim plugins with"
   puts "the standard set of plugins. You will then be able to "
   puts "manage your vim's plugin configuration by editing the "
-  puts "file .vim/vundles.vim"
+  puts "file .vim/plugins.vim"
   puts "======================================================"
 
   Dir.glob(File.join('vim', 'bundle','**')) do |sub_path|
@@ -91,24 +90,24 @@ task :vundle_migration do
   FileUtils.mv(File.join('vim','bundle'), File.join('vim', 'bundle.old'))
 end
 
-desc "Runs Vundle installer in a clean vim environment"
-task :install_vundle do
+desc "Runs vim-plug installer in a clean vim environment"
+task :install_vim_plug do
   puts "======================================================"
-  puts "Installing and updating vundles."
-  puts "The installer will now proceed to run PluginInstall to install vundles."
+  puts "Installing and updating vim plugins."
+  puts "The installer will now proceed to run PluginInstall to install plugins."
   puts "======================================================"
 
   puts ""
 
-  vundle_path = File.join('vim','bundle', 'vundle')
-  unless File.exists?(vundle_path)
+  vim_plug_path = File.join('vim','bundle', 'vim-plug')
+  unless File.exists?(vim_plug_path)
     run %{
       cd $HOME/.yadr
-      git clone https://github.com/gmarik/vundle.git #{vundle_path}
+      git clone --depth 1 https://github.com/junegunn/vim-plug #{vim_plug_path}
+      mkdir -p vim/autoload
+      ln -nfs ../bundle/vim-plug/plug.vim vim/autoload
     }
   end
-
-  Vundle::update_vundle
 end
 
 task :default => 'install'
@@ -125,7 +124,7 @@ def install_tmux
   install_files(Dir.glob('tmux/*')) if want_to_install?('tmux config')
   run %{
     mkdir -p $HOME/.tmux/plugins
-    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+    git clone --depth 1 https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
   }
 end
 
@@ -317,7 +316,7 @@ def install_files(files, method = :symlink)
   end
 end
 
-def needs_migration_to_vundle?
+def needs_migration_to_vim_plug?
   File.exists? File.join('vim', 'bundle', 'tpope-vim-pathogen')
 end
 

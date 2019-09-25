@@ -14,3 +14,5 @@ vim/sessions
 .netrwhist
 bin/subl
 tags
+vim/autoload/plug.vim
+vim/plugs.local

@@ -1,7 +1,0 @@
-Bundle "scrooloose/nerdtree.git"
-" Required by vim-session
-Bundle "xolox/vim-misc"
-Bundle "xolox/vim-session"
-Bundle 'janko-m/vim-test'
-Bundle 'tpope/vim-projectionist'
-Bundle 'freitass/todo.txt-vim'

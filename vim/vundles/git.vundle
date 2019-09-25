@@ -1,3 +1,0 @@
-Bundle "tpope/vim-fugitive"
-Bundle "rbong/vim-flog"
-Bundle "tpope/vim-git"

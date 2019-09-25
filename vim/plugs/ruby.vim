@@ -1,0 +1,7 @@
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-rvm'
+Plug 'vim-ruby/vim-ruby'
+Plug 'keith/rspec.vim'
+Plug 'tpope/vim-bundler'

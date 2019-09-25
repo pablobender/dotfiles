@@ -1,7 +1,0 @@
-Bundle "chrisbra/Colorizer"
-Bundle "pablobender/lightline-gruvbox.vim"
-Bundle "itchyny/lightline.vim"
-Bundle "xsunsmile/showmarks.git"
-Bundle "morhetz/gruvbox"
-" Required for Gblame in terminal vim
-Bundle "godlygeek/csapprox.git"
