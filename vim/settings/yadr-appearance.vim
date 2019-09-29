@@ -21,9 +21,7 @@ else
   let g:CSApprox_loaded = 1
 endif
 
-set background=dark
-set cursorline
-
-" gruvbox setup
 colorscheme gruvbox
-hi CursorLine ctermbg=NONE guibg=NONE
+" gruvbox patches
+set nocursorline
+hi Visual ctermbg=NONE

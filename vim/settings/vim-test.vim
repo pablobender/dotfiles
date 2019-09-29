@@ -1,14 +1,10 @@
-if has('nvim') || has('terminal')
-  function! VimTerminalTestStrategy(cmd)
-    if has('nvim')
-      exec 'botright 22 split term://' . a:cmd
-      return
-    exec 'botright terminal ++rows=22 ' . a:cmd
-  endfunction
-
-  let g:test#custom_strategies = { 'VimTerminal': function('VimTerminalTestStrategy') }
-  let g:test#strategy = 'VimTerminal'
+if has('nvim')
+  let g:test#strategy = 'neovim'
+elseif has('terminal')
+  let g:test#strategy = 'vimterminal'
 endif
+
+let test#javascript#jest#options = '-w1'
 
 nmap ts :TestSuite<CR>
 nmap tl :TestLast<CR>

@@ -1,3 +1,5 @@
-Plug 'tpope/vim-fugitive'
-Plug 'rbong/vim-flog'
-Plug 'tpope/vim-git'
+Plug 'godlygeek/csapprox' |
+      \ Plug 'tpope/vim-git' |
+      \ Plug 'tpope/vim-fugitive' |
+      \ Plug 'rbong/vim-flog'
+

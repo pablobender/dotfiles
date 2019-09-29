@@ -20,11 +20,13 @@ set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 set nomodeline                  "Disable modeline to avoid security issues (https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md)
+set pastetoggle=,p
+set background=dark
 
-" This makes vim act like all other editors, buffers can
-" exist in the background without being in a window.
-" http://items.sjbach.com/319/configuring-vim-right
-set hidden
+" " This makes vim act like all other editors, buffers can
+" " exist in the background without being in a window.
+" " http://items.sjbach.com/319/configuring-vim-right
+" set hidden
 
 "turn on syntax highlighting
 syntax on
@@ -41,11 +43,9 @@ endif
 " ================ Turn Off Swap Files ==============
 
 set noswapfile
-set nobackup
-set nowb
 
 " ================ Persistent Undo ==================
-" Keep undo history across sessions, by storing in file.
+" Keep undo history across sessions, by string in file.
 " Only works all the time.
 if has('persistent_undo') && isdirectory(expand('~').'/.vim/backups')
   silent !mkdir ~/.vim/backups > /dev/null 2>&1
@@ -80,8 +80,8 @@ set linebreak    "Wrap lines at convenient points
 
 " ================ Folds ============================
 
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
+" set foldmethod=indent   "fold based on indent
+" set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 
 " ================ Completion =======================
@@ -101,9 +101,9 @@ set wildignore+=*.png,*.jpg,*.gif
 
 " ================ Scrolling ========================
 
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins
-set sidescrolloff=15
-set sidescroll=1
+" set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+" set sidescrolloff=15
+" set sidescroll=1
 
 " ================ Search ===========================
 
