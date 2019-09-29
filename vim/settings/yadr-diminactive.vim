@@ -17,8 +17,11 @@ if has("nvim")
 
   " Change highlight group of active/inactive windows
   function! s:DimInactives()
+    if (winnr('$') == 1)
+      if (&winhighlight != 'Normal:InactiveWindow,NormalNC:InactiveWindow')
+        return
+      endif
+    endif
     setlocal winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
   endfunction
-else
-  " highlight ColorColumn ctermbg=236 guibg=#303030
 end
