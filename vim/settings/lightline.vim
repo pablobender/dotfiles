@@ -1,8 +1,12 @@
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste', 'fugitive' ],
-      \             [ 'filename', 'readonly', 'modified' ] ]
+      \   'left': [ [ 'mode' ],
+      \             [ 'paste', 'fugitive' ],
+      \             [ 'filename', 'readonly', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              ['fileformat', 'fileencoding', 'filetype'] ]
       \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive',
@@ -17,7 +21,7 @@ let g:lightline = {
 " \ 'subseparator': { 'left': '', 'right': '' }
 " \ 'subseparator': { 'left': ' ', 'right': '  ' }
 " \ 'subseparator': { 'left': '', 'right': '' }
-" \ 'subseparator': { 'left': '', 'right': ' ' }
+" \ 'subseparator': { 'left': '', 'right': '' }
 " \ 'subseparator': { 'left': '', 'right': ' ' }
 " \ 'subseparator': { 'left': '', 'right': '' }
 " \ 'subseparator': { 'left': '•', 'right': '•' }
