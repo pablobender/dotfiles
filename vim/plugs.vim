@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.vim/plugged')
 
 runtime plugs/ruby.vim
 runtime plugs/languages.vim
