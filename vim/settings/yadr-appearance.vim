@@ -24,4 +24,15 @@ endif
 colorscheme gruvbox
 " gruvbox patches
 set nocursorline
-hi Visual ctermbg=NONE
+hi Visual ctermbg=NONE guibg=NONE
+function! s:getGruvColor(group)
+  let guiColor = synIDattr(hlID(a:group), "fg", "gui")
+  let termColor = synIDattr(hlID(a:group), "fg", "cterm")
+  return [ guiColor, termColor ]
+endfunction
+let s:gray = s:getGruvColor('GruvboxGray')
+let s:bg0  = s:getGruvColor('GruvboxBg0')
+exec 'hi VertSplit ctermfg=' . s:gray[1] . ' ctermbg=' . s:bg0[1] . ' guifg=' . s:gray[0] . ' guibg=' . s:bg0[0]
+
+" vim-devicons pathces
+hi link NERDTreeFlags GruvboxAqua

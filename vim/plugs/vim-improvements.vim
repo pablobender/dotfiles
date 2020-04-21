@@ -1,4 +1,5 @@
-Plug 'tpope/vim-dispatch'
+let g:dispatch_no_maps=1 |
+      \ Plug 'tpope/vim-dispatch'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'zchee/deoplete-go', { 'build': 'make' }
@@ -31,6 +32,8 @@ Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'christoomey/vim-sort-motion'
 Plug 'junegunn/fzf.vim'
+let g:ctrlp_map='<leader>p' |
+      \ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'glts/vim-magnum' |
       \ Plug 'glts/vim-radical'
 if has('nvim')
@@ -40,3 +43,7 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+" testings
+Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-eunuch'
+Plug 'rrethy/vim-illuminate'

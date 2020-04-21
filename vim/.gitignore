@@ -3,3 +3,14 @@ tags
 *.swp
 .VimballRecord
 view
+/bundle/
+/plugged/
+/.netrwhist
+/tmp
+/spell
+/after/.vimrc.after
+/.vundles.local
+/.vundles.local.bak
+/sessions
+/backups
+/view

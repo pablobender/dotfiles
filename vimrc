@@ -10,8 +10,9 @@ endif
 
 " ================ General Config ====================
 
-set number                      "Line numbers are good
+let mapleader=" "
 set relativenumber
+set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
@@ -20,8 +21,11 @@ set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 set nomodeline                  "Disable modeline to avoid security issues (https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md)
-set pastetoggle=,p
+set pastetoggle=<leader>p
 set background=dark
+set termguicolors
+set noequalalways
+set fillchars=vert:⎪,fold:-
 
 " " This makes vim act like all other editors, buffers can
 " " exist in the background without being in a window.
@@ -30,8 +34,6 @@ set background=dark
 
 "turn on syntax highlighting
 syntax on
-
-let mapleader=","
 
 " =============== vim-plug Initialization ===============
 " This loads all the plugins specified in ~/.vim/plugs.vim

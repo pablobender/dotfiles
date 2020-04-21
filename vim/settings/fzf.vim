@@ -1,7 +1,7 @@
 let $FZF_DEFAULT_COMMAND='fd --type file'
 set runtimepath+=/usr/local/opt/fzf
 
-nmap ,t :Files<CR>
+nmap <leader>t :Files<CR>
 
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',

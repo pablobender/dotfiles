@@ -1,6 +1,7 @@
 Plug 'chrisbra/Colorizer'
-Plug 'xsunsmile/showmarks'
-
+" Plug 'xsunsmile/showmarks'
+Plug 'kshenoy/vim-signature'
+"
 set background=dark |
       \ let g:gruvbox_bold=1 |
       \ let g:gruvbox_italic=1 |
@@ -14,6 +15,8 @@ set background=dark |
       \ Plug 'pablobender/lightline-gruvbox.vim'
 
 if !has('nvim')
-  "diminactive only in vim
-  Plug 'blueyed/vim-diminactive'
+  ""diminactive only in vim
+  "let g:diminactive_enable_focus = 1 |
+  "      \ Plug 'tmux-plugins/vim-tmux-focus-events' |
+  "      \ Plug 'blueyed/vim-diminactive'
 endif
