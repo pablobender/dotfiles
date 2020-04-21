@@ -22,7 +22,6 @@ alias yip='yadr init-plugins'
 # PS
 alias psa="ps aux"
 alias psg="ps aux | grep "
-alias psr='ps aux | grep ruby'
 
 # Moving around
 alias cdb='cd -'
@@ -30,7 +29,6 @@ alias cls='clear;ls'
 
 # Show human friendly numbers and colors
 alias df='df -h'
-alias du='du -h -d 2'
 
 if [[ $platform == 'linux' ]]; then
   alias ll='ls -alh --color=auto'
@@ -51,19 +49,6 @@ TRAPHUP() {
 alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
 alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
 alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
-
-# vim using
-nvim --version > /dev/null 2>&1
-NVIM_INSTALLED=$?
-if [ $NVIM_INSTALLED -eq 0 ]; then
-  alias vim="nvim"
-else
-  mvim --version > /dev/null 2>&1
-  MACVIM_INSTALLED=$?
-  if [ $MACVIM_INSTALLED -eq 0 ]; then
-    alias vim="mvim -v"
-  fi
-fi
 
 # mimic vim functions
 alias :q='exit'
